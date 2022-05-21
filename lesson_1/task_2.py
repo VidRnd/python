@@ -24,6 +24,7 @@ for num in num_list:
         sum_plus = sum_plus + num_plus
 print("Сумма -", sum_all)
 print("Сумма добавляем '17' к каждому числу -", sum_plus)
+print("k")
 
 
 
