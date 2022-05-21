@@ -31,3 +31,5 @@ else:
             print(str(day) +" дн "+str(hour)+" час "+str(minutes) + " мин " +str(seconds)+ " сек")
     if duration == 86400:
         print("Или\n1 день")
+
+
