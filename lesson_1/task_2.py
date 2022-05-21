@@ -13,10 +13,8 @@ for num in num_list:
         suma_num = suma_num + digit
         num = num // 10
     if suma_num%7 == 0:
-        print(suma_num)
         sum_all = sum_all + num_for_sum
     num_plus = int(str(num_for_sum)+"17")
-    print(num_plus)
     suma_num = 0
     while num > 0 :
         digit = num % 10
