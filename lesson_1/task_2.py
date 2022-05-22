@@ -1,10 +1,9 @@
 sum_all = 0
 sum_plus = 0
 num_list = []
-for i in range(1,1001):
+for i in range(1,1001,2):
     num = i**3
-    if num % 2 > 0 :
-        num_list.append(num)
+    num_list.append(num)
 for num in num_list:
     num_for_sum = (num)
     suma_num = 0
