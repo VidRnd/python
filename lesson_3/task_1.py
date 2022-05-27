@@ -8,7 +8,7 @@ dict_number = {
     'seven':'семь',
     'eight':'восемь',
     'nine':'девять',
-    'девять':'десять'
+    'ten':'десять'
 }
 def num_translate(put):
     print(dict_number.get(f'{put}',None))
