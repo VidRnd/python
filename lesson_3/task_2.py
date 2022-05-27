@@ -8,7 +8,7 @@ dict_number = {
     'seven':'семь',
     'eight':'восемь',
     'nine':'девять',
-    'девять':'десять'
+    'ten':'десять'
 }
 def num_translate(put):
     if put[0].isupper() == True:
