@@ -1,4 +1,5 @@
 rezult_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+print(id(rezult_list))
 for i in rezult_list[:]:
     index_rez_lst = rezult_list.index ( f"{i}" )
     if i[0] == '+':
@@ -17,6 +18,7 @@ for i in rezult_list[:]:
         else:
             rezult_list.insert ( index_rez_lst , '"' )
             rezult_list.insert ( index_rez_lst + 2 , '"' )
+print(*rezult_list)
 
-print(rezult_list)
 print(" ".join(rezult_list))
+
