@@ -10,14 +10,14 @@ def thesaurus_adv(*args):
             rez_sorting[ key ] = [ ]
         rez_sorting[ key ].append ( surname )
     for i in rez_sorting.keys():
-        res1 = {}
+        res_sort_name = {}
         for g in rez_sorting[i]:
-            key1 = g[ 0 ][ 0 ]
-            if key1 not in res1 :
-                res1[ key1 ] = [ ]
+            sort_name = g[ 0 ][ 0 ]
+            if sort_name not in res_sort_name :
+                res_sort_name[ sort_name ] = [ ]
             connect_text= g[0]+", "+g[1]
-            res1[key1].append (connect_text )
-        rez_sorting[i]=(res1)
+            res_sort_name[sort_name].append (connect_text )
+        rez_sorting[i]=(res_sort_name)
     return rez_sorting
 
 result = thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
