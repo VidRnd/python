@@ -21,7 +21,6 @@ def thesaurus_adv(*args):
     return rez_sorting
 
 result = thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
-thesaurus_adv=("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
-print(type(thesaurus_adv))
+
 print(result)
 
