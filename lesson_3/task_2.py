@@ -11,6 +11,7 @@ dict_number = {
     'ten':'десять'
 }
 def num_translate(put):
+    """Переводит слова с Английского на русский от 1 до 10, ответ отправляет в регистре первой буквы в запросе"""
     if put[0].isupper() == True:
         data = dict_number.get ( f'{put.lower()}' )
         print(data.capitalize())
