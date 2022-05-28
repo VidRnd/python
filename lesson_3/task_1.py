@@ -11,7 +11,7 @@ dict_number = {
     'ten':'десять'
 }
 def num_translate(put):
-    """"""
+    """Переводит слова с Английского на русский от 1 до 10"""
     print(dict_number.get(f'{put}',None))
 
-num_translate(input("Введите число по Английски: "))
+num_translate(input("Напишите чило по  Английски от 1 до 10: "))
