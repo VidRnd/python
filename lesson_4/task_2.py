@@ -13,5 +13,6 @@ def currency_rates(money):
              f"Стоимость: {answer_json['Valute'][f'{money}']['Value']} руб"
     return answer
 
-print(currency_rates("ZAR"))
+print(currency_rates("USD"))
+print(currency_rates("EUR"))
 
