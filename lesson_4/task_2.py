@@ -2,6 +2,8 @@ import requests
 import datetime as dt
 
 def currency_rates(money):
+    """Запрашиваем на сайте курс валют
+       Принимаем валюту в формате RUB,EUR """
     URL = 'https://www.cbr-xml-daily.ru/daily_json.js'
     response = requests.get ( URL )
     answer_json=response.json()
