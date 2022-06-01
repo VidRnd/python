@@ -15,9 +15,10 @@ def currency_rates(money):
         date_time_obj = dt.datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S%z')
         answer = f"Время: {date_time_obj.strftime('%Y-%m-%d %H:%M:%S')}\n" \
                  f"Валюта: {(answer_json['Valute'][f'{money.upper()}']['Name'] )}\n" \
-                 f"Стоимость: {answer_json['Valute'][f'{money.upper()}']['Value']} руб"
+                 f"Стоимость: {answer_json['Valute'][f'{money.upper()}']['Value']} руб\n"
         return answer
 
-print(currency_rates(input("Введите  валюту чтобы узнать стоимость в формате RUB,EUR")))
+print(currency_rates("USD"))
+print(currency_rates("euR"))
 
 

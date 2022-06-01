@@ -15,7 +15,7 @@ def currency_rates(money):
         date_time_str = answer_json[ 'Date' ]
         date_time_obj = dt.datetime.strptime ( date_time_str , '%Y-%m-%dT%H:%M:%S%z' )
         answer = f"{round(answer_json[ 'Valute' ][ f'{money.upper ( )}' ][ 'Value' ],2)}" \
-                 f", {date_time_obj.strftime ( '%Y-%m-%d' )}\n"
+                 f", {date_time_obj.strftime ( '%Y-%m-%d' )}"
         return answer
 
 
