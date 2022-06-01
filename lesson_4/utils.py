@@ -1,31 +1,20 @@
 import requests
-import pprint
-import  json
 import datetime as dt
 
 
 def currency_rates(money):
+    """Запрашиваем на сайте курс валют
+           Принимаем валюту в формате RUB,EUR """
     URL = 'https://www.cbr-xml-daily.ru/daily_json.js'
-
     response = requests.get ( URL )
-    h=response.json()
-    # customer = dict( h['Valute'] )
-    # # customer.get(f'{money}',None)
-    # customer = customer.get(f'{money}',None)
-    if dict( h['Valute'] ).get(f'{money}',None) is None:
-        ddd = "Такой валюты нет"
+    answer_json = response.json ( )
+    if dict ( answer_json[ 'Valute' ] ).get ( f'{money.upper ( )}' , None ) is None :
         return None
-    else:
-    # g =
-    # pprint.pprint(h)
-    # pprint.pprint((h['Valute'][f'{money}']['Value']))
-        date_time_str = h['Date']
-        date_time_obj = dt.datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S%z')
-        # print(date_time_obj)
-        answer = f"Время: {date_time_obj.strftime('%Y-%m-%d %H:%M:%S')}\nВалюта: {(h['Valute'][f'{money}']['Name'] )}\n" \
-                 f"Стоимость: {h['Valute'][f'{money}']['Value']} руб"
-
+    else :
+        date_time_str = answer_json[ 'Date' ]
+        date_time_obj = dt.datetime.strptime ( date_time_str , '%Y-%m-%dT%H:%M:%S%z' )
+        answer = f"Время: {date_time_obj.strftime ( '%Y-%m-%d %H:%M:%S' )}\n" \
+                 f"Валюта: {(answer_json[ 'Valute' ][ f'{money.upper ( )}' ][ 'Name' ])}\n" \
+                 f"Стоимость: {answer_json[ 'Valute' ][ f'{money.upper ( )}' ][ 'Value' ]} руб"
         return answer
-
-# print(currency_rates("ZAR"))
 
