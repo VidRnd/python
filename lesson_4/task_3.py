@@ -1,7 +1,6 @@
 import requests
 import datetime as dt
 
-
 def currency_rates(money):
     """Запрашиваем на сайте курс валют
        Принимаем валюту в формате RUB,EUR """
@@ -20,5 +19,7 @@ def currency_rates(money):
 
 print(currency_rates("USD"))
 print(currency_rates("euR"))
+print(currency_rates("euRвмвмвм"))
+
 
 
