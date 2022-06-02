@@ -19,7 +19,7 @@ def currency_rates(money):
 
 print(currency_rates("USD"))
 print(currency_rates("euR"))
-print(currency_rates("euRвмвмвм"))
+print(currency_rates("euRвмвмвмt"))
 
 
 
