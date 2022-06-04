@@ -1,3 +1,4 @@
+import pprint
 import requests
 import datetime as dt
 
@@ -7,6 +8,7 @@ def currency_rates(money):
     URL = 'https://www.cbr-xml-daily.ru/daily_json.js'
     response = requests.get ( URL )
     answer_json=response.json()
+    pprint.pprint(answer_json)
     if dict( answer_json['Valute'] ).get(f'{money.upper()}',None) is None:
         return None
     else:
