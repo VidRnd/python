@@ -12,6 +12,8 @@ dict_number = {
 }
 def num_translate(put):
     """Переводит слова с Английского на русский от 1 до 10"""
-    print(dict_number.get(f'{put}',None))
-
-num_translate(input("Напишите чило по  Английски от 1 до 10: "))
+    if dict_number.get(f'{put}',None) == None:
+        return None
+    else:
+        return dict_number.get ( f'{put}')
+print(num_translate(input("Напишите чило по  Английски от 1 до 10: ")))
