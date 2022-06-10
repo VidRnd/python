@@ -1,5 +1,7 @@
-# Не используя библиотеки для парсинга, распарсить (получить определённые данные) файл логов
-# web-сервера nginx_logs.txt
-# (https://github.com/elastic/examples/raw/master/Common%20Data%20Formats/nginx_logs/nginx_logs)
-# — получить список кортежей вида: (<remote_addr>, <request_type>,
-# <requested_resource>). Например:
+lst = []
+with open ( "nginx_logs.txt" , "r" , encoding = "utf-8" ) as rez:
+    for line in rez:
+        content = (line.split()[0], line.split()[5], line.split()[6])
+        lst.append(content)
+print(lst)
+
