@@ -8,17 +8,11 @@ with open("rez.txt", 'w+', encoding = 'utf-8') as file:
     file.write(rez.text)
 with open("rez.txt", 'r', encoding = 'utf-8') as file:
     for i in file:
-
-        rez = re.findall(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*\[(.+\d{4}).*"([A-Z]{3}).*(/d.+?)\s.*\s(\d+)\s(\d+) ',
-                         i)
-
+        rez = re.findall(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*\[(.+\d{4}).*"([A-Z]{3}).*(/d.+?)\s.*\s(\d+)\s(\d+) ', i)
         if not rez:
             rez = re.findall(r'(^\w{4}:.+\:\w{4}).*\[(.+\d{4}).*"([A-Z]{3}).*(/d.+?)\s.*\s(\d+)\s(\d+)', i)
-            print("--------", rez)
-
             if not rez:
-                print("-===========", i)
-        print(rez)
-
-        with open("rez_format", "a", encoding = "utf-8") as rez_format:
+                print("Не прошло фильтр", i)
+        with open("rez_format.txt", "a", encoding = "utf-8") as rez_format:
             rez_format.write(f'{rez}\n')
+    print("Конец поиска")
